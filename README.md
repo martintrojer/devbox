@@ -1,6 +1,7 @@
 # Clojure muti-user devbox
 
 * Using Vagrant and puppet
+* JVM, Emacs, Lein
 * Elasticsearch running as a service
 * Stubs for AWS
 
@@ -21,7 +22,7 @@
 * vagrant ssh (not ideal, not the correct user)
 
 1. ssh-add ~/.ssh/id_rsa
-2. ssh -A localhost -p 2222
+2. ssh -A jon@localhost -p 2222
 
 ## Pairing
 
