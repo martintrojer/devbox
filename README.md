@@ -13,9 +13,16 @@
 
 ## Adding a user
 
+Edit these files;
+
 * puppet/modules/users/manifests/init.pp
 * puppet/modules/users/files/...
 * puppet/modules/wemux/templates/usr/local/etc/wemux.conf.erb
+
+### users/manifests/init.pp
+
+* ssh_key is ~/.ssh/id_rsa.pub
+* password_hash is created with 'passwd ...'
 
 ## Connecting
 
@@ -27,8 +34,3 @@
 ## Pairing
 
 wemux
-
-### Misc
-
-* ssh_key is ~/.ssh/id_rsa.pub
-* password_hash is created with 'passwd ...'
