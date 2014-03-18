@@ -10,7 +10,15 @@
 2. git submodule update
 3. vagrant up
 
+## Adding a user
+
+* puppet/modules/users/manifests/init.pp
+* puppet/modules/users/files/...
+* puppet/modules/wemux/templates/usr/local/etc/wemux.conf.erb
+
 ## Connecting
+
+* vagrant ssh (not ideal, not the correct user)
 
 1. ssh-add ~/.ssh/id_rsa
 2. ssh -A localhost -p 2222
@@ -18,12 +26,6 @@
 ## Pairing
 
 wemux
-
-## Adding a user
-
-* puppet/modules/users/manifests/init.pp
-* puppet/modules/users/files/...
-* puppet/modules/wemux/templates/usr/local/etc/wemux.conf.erb
 
 ### Misc
 
