@@ -11,12 +11,12 @@ include leiningen
 include emacs
 include users
 include wemux
+include git
 
 class { 'elasticsearch':
   package_url => 'https://download.elasticsearch.org/elasticsearch/elasticsearch/elasticsearch-1.0.1.deb'
 }
 
-package { 'git' : ensure => present }
 package { 'curl' : ensure => present }
 package { 'tmux' : ensure => present }
 package { 'tree' : ensure => present }
