@@ -12,6 +12,8 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
 
   # ElasticSearch
   config.vm.network :forwarded_port, guest: 9200, host: 9200
+  # ZooKeeper
+  config.vm.network :forwarded_port, guest: 2181, host: 2181
 
   config.vm.provision "puppet" do |puppet|
     puppet.manifests_path = "puppet/manifests"

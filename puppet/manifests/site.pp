@@ -15,7 +15,10 @@ include git
 
 class { 'elasticsearch':
   package_url => 'https://download.elasticsearch.org/elasticsearch/elasticsearch/elasticsearch-1.0.1.deb'
+  require => Class['java'],
 }
+
+package { 'zookeeperd': ensure => present }
 
 package { 'curl' : ensure => present }
 package { 'tmux' : ensure => present }
