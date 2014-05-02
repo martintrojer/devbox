@@ -35,7 +35,6 @@ define work_repos {
 class users::martin {
 
   user_with_home { "martin":
-    ## TODO; move to hiera
     password_hash => "FillMeIn",
     ssh_key => "FillMeIn",
   }
@@ -49,18 +48,8 @@ class users::martin {
   }
 }
 
-class users::jon {
-
-  user_with_home { "jon":
-    ## TODO; move to hiera
-    password_hash => "FillMeIn",
-    ssh_key => "FillMeIn",
-  }
-}
-
 class users {
 
   require martin
-  require jon
 
 }

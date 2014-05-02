@@ -4,16 +4,13 @@
 VAGRANTFILE_API_VERSION = "2"
 
 Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
-#  config.vm.box = "dummy" # AWS
-  config.vm.box = "precise64"
-  config.vm.box_url = "http://files.vagrantup.com/precise64.box"
+  # config.vm.box = "dummy" # AWS
+  config.vm.box = "trusty64"
+  # vagrant box add trusty64 https://cloud-images.ubuntu.com/vagrant/trusty/current/trusty-server-cloudimg-amd64-vagrant-disk1.box
 
   config.ssh.forward_agent = true
 
-  # ElasticSearch
-  config.vm.network :forwarded_port, guest: 9200, host: 9200
-  # ZooKeeper
-  config.vm.network :forwarded_port, guest: 2181, host: 2181
+  config.vm.network :forwarded_port, guest: 8080, host: 8080
 
   config.vm.provision "puppet" do |puppet|
     puppet.manifests_path = "puppet/manifests"
