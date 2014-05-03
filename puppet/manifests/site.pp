@@ -1,5 +1,5 @@
 import 'puppetlabs-stdlib'
-class { 'apt': }
+class { 'apt': always_apt_update => true }
 
 include leiningen
 include users
