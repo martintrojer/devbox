@@ -1,7 +1,7 @@
 class wemux {
   vcsrepo { "/usr/local/share/wemux":
     ensure   => latest,
-    source   => "git://github.com/zolrath/wemux.git",
+    source   => "https://github.com/zolrath/wemux.git",
     provider => git,
   }
 
