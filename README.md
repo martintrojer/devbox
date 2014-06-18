@@ -2,7 +2,7 @@
 
 * Using Vagrant and puppet
 * JVM, Emacs, Lein
-* Elasticsearch running as a service
+* PostreSQL
 * Stubs for AWS
 
 ## Setting up
